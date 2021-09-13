@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "wWye6HPO9M2gwuJx34H/VaJbklS0b+eZAxVGERSyTTG5QyZ4VVICxbTQkG3uVhVf/C/9gKo00SEwJNrpmvJHAA==",
+  "success": true,
+  "projectFilePath": "C:\\dev\\ss\\PdfMaker\\PassAPI\\PassAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nico\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\nico\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\nico\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\nico\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\nico\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\nico\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
