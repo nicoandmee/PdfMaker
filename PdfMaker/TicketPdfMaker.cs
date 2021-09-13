@@ -108,10 +108,7 @@ namespace PdfMaker
             Document.Debug = Debug;
 
             PdfInfo Info = PdfInfo.CreatePdfInfo(Document);
-            Info.Title("TicketPassCard");
-            Info.Author("blueskaie");
-            Info.Keywords("PDF, .NET, C#, Library, Document Creator");
-            Info.Subject("PDF File Writer C# Class Library (Version 1.14.1)");
+            Info.Title("Ticket");
 
             // Step 2: create resources
             // define font resources
@@ -138,11 +135,7 @@ namespace PdfMaker
             // Step 6: create pdf file
             Document.CreateFile();
 
-            // start default PDF reader and display the file
-            Process Proc = new Process();
-            Proc.StartInfo = new ProcessStartInfo(FileName);
-            Proc.Start();
-            Console.WriteLine("end");
+            Console.WriteLine($"[+] Output File: {FileName}");
             Console.ReadLine();
             // exit
             return;

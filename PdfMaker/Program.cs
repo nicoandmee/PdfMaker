@@ -1,10 +1,5 @@
-﻿using PdfFileWriter;
-using ZXing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.IO;
 
 namespace PdfMaker
 {
@@ -12,9 +7,20 @@ namespace PdfMaker
     {
         static void Main(string[] args)
         {
-            TicketPdfMaker t = new TicketPdfMaker("Samples/Ticketmaster_l1L9x.pkpass");
-            //t.ReadJson("Ticketmaster_Yw7iB/pass.json");
-            t.Test(false, "Ticketmaster_l1L9x.pdf");
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Please pass filename as argument.");
+                return;
+            }
+            string filename = args[0];
+            Console.WriteLine($"Converting: {filename}");
+            TicketPdfMaker t = new TicketPdfMaker(filename);
+
+            string outputFilename = Path.ChangeExtension(filename, "pdf");
+            Console.WriteLine($"Output file: {outputFilename}");
+            // Do conversion
+            t.Test(false, outputFilename);
+            return;
         }
     }
 }
