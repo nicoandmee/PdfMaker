@@ -68,6 +68,7 @@ namespace PdfMaker
 
         public TicketPdfMaker(string pkpassfile)
         {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             pk = PassKit.Parse(pkpassfile);
             Console.WriteLine(pk.Barcode.Message);
 
@@ -81,7 +82,7 @@ namespace PdfMaker
 
                 PdfPassJson = JsonConvert.DeserializeObject<PassJson>(json);
                 Console.WriteLine(PdfPassJson.EventTicket.HeaderFields[0].Key);
- 
+
             }
             return;
         }
@@ -125,13 +126,13 @@ namespace PdfMaker
 
             // Step 5: add graphices and text contents to the contents object
             DrawFrameAndBackgroundWaterMark();
-            
+
             DrawLogImage();
             //DrawTime();
             DrawStrip();
             DrawAuxiliaryFields();
             DrawBarcode();
-            
+
             // Step 6: create pdf file
             Document.CreateFile();
 
@@ -274,7 +275,7 @@ namespace PdfMaker
             CreateLogoFile();
 
             PdfImage Image1 = new PdfImage(Document, "temps/" + pk.Logo.Filename, ImageControl);
-            
+
             // save graphics state
             Contents.SaveGraphicsState();
 
@@ -296,7 +297,7 @@ namespace PdfMaker
         }
         /*
         private Item FindItem(List<Item> source, string key) {
-            
+
             foreach (Item item in source)
             {
                 if (item.Key == key)
@@ -321,7 +322,7 @@ namespace PdfMaker
         {
             // translate coordinate origin to the center of the picture
             Contents.SetColorNonStroking(Color.Black);
-            
+
             Contents.DrawText(ArialNormal, 16.0, posX, posY, textalign, label);
 
             // save graphics state
@@ -360,7 +361,7 @@ namespace PdfMaker
             //		ImageControl.ReverseBW = true;
             CreateStripFile();
             PdfImage Image1 = new PdfImage(Document, "temps/strip.png", ImageControl);
-            
+
             // save graphics state
             Contents.SaveGraphicsState();
             Contents.DrawImage(Image1, 0, 7.8, 8.5, 2.3);
@@ -380,7 +381,7 @@ namespace PdfMaker
             }
             return null;
         }
-        
+
         private void DrawAuxiliaryFields()
         {
             PKPassStringField eventtitle = (PKPassStringField)FindPKPassField(pk.SecondaryFields, "eventtitle");
@@ -388,7 +389,7 @@ namespace PdfMaker
 
             PKPassField section = (PKPassField)FindPKPassField(pk.AuxiliaryFields, "section");
             DrawProperty(section?.Label, "100", TextJustify.Left, 0.5, 6.6);
-            
+
             PKPassNumberField row = (PKPassNumberField)FindPKPassField(pk.AuxiliaryFields, "row");
             DrawProperty(row?.Label, row?.Value.ToString(), TextJustify.Left, 1.8, 6.6);
 
@@ -437,10 +438,22 @@ namespace PdfMaker
         {
             // save graphics state
             Contents.SaveGraphicsState();
-            //string barcode = PdfPassJson.Barcode.Message;
             string barcode = pk.Barcode.Message;
-            PdfQRCode QRCode = new PdfQRCode(Document, barcode, ErrorCorrection.M);
-            Contents.DrawQRCode(QRCode, 1.75, 0.5, 5);
+
+            // create QRCode barcode
+            QREncoder QREncoder = new QREncoder();
+
+            // set error correction code (default is M)
+            QREncoder.ErrorCorrection = ErrorCorrection.M;
+
+            // encode your text or byte array
+            QREncoder.Encode(barcode);
+
+            // convert QRCode to PdfImage in black and white
+            PdfImage BarcodeImage = new PdfImage(Document);
+            BarcodeImage.LoadImage(QREncoder);
+
+            Contents.DrawImage(BarcodeImage, 1.75, 0.5, 5);
             Contents.DrawText(ArialNormal, 24, 4.25, 0.7, TextJustify.Center, barcode);
 
             // restore graphics sate

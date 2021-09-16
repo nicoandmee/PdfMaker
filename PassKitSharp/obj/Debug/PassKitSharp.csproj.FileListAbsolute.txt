@@ -8,3 +8,13 @@ C:\repos\PdfMaker\PassKitSharp\obj\Debug\PassKitSharp.csprojAssemblyReference.ca
 C:\repos\PdfMaker\PassKitSharp\obj\Debug\PassKitSharp.csproj.CopyComplete
 C:\repos\PdfMaker\PassKitSharp\obj\Debug\PassKitSharp.dll
 C:\repos\PdfMaker\PassKitSharp\obj\Debug\PassKitSharp.pdb
+C:\dev\ss\PdfMaker\PassKitSharp\bin\Debug\PassKitSharp.dll
+C:\dev\ss\PdfMaker\PassKitSharp\bin\Debug\PassKitSharp.pdb
+C:\dev\ss\PdfMaker\PassKitSharp\bin\Debug\Ionic.Zip.Reduced.dll
+C:\dev\ss\PdfMaker\PassKitSharp\bin\Debug\Newtonsoft.Json.dll
+C:\dev\ss\PdfMaker\PassKitSharp\bin\Debug\Newtonsoft.Json.xml
+C:\dev\ss\PdfMaker\PassKitSharp\obj\Debug\PassKitSharp.csproj.AssemblyReference.cache
+C:\dev\ss\PdfMaker\PassKitSharp\obj\Debug\PassKitSharp.csproj.CoreCompileInputs.cache
+C:\dev\ss\PdfMaker\PassKitSharp\obj\Debug\PassKitSharp.csproj.CopyComplete
+C:\dev\ss\PdfMaker\PassKitSharp\obj\Debug\PassKitSharp.dll
+C:\dev\ss\PdfMaker\PassKitSharp\obj\Debug\PassKitSharp.pdb

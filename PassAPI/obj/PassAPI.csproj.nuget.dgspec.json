@@ -40,9 +40,29 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "PassKitSDK": {
+              "target": "Package",
+              "version": "[1.2.2, )"
+            },
+            "PdfFileWriter": {
+              "target": "Package",
+              "version": "[1.25.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "jose-jwt": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             }
           },
           "imports": [
