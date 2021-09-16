@@ -75,7 +75,7 @@ namespace PassAPI
             // Step 5: add graphices and text contents to the contents object
             DrawFrameAndBackgroundWaterMark();
 
-            DrawLogImage();
+            DrawLogo();
             // DrawTime();
             DrawStrip();
             DrawAuxiliaryFields();
@@ -212,35 +212,38 @@ namespace PassAPI
             return;
         }
 
-        private void DrawLogImage()
+        private void DrawLogo()
         {
-            // define local image resources
-            // resolution 96 pixels per inch, image quality 100%
-            PdfImageControl ImageControl = new PdfImageControl();
-            ImageControl.Resolution = 96.0;
-            ImageControl.ImageQuality = 100;
+            if (pk.Logo != null) {
+                // define local image resources
+                // resolution 96 pixels per inch, image quality 100%
+                PdfImageControl ImageControl = new PdfImageControl();
+                ImageControl.Resolution = 96.0;
+                ImageControl.ImageQuality = 100;
 
-            CreateLogoFile();
+                CreateLogoFile();
 
-            PdfImage Image1 = new PdfImage(Document, "temps/" + pk.Logo.Filename, ImageControl);
+                PdfImage Image1 = new PdfImage(Document, "temps/" + pk.Logo.Filename, ImageControl);
 
-            // save graphics state
-            Contents.SaveGraphicsState();
+                // save graphics state
+                Contents.SaveGraphicsState();
 
-            // translate coordinate origin to the center of the picture
-            Contents.Translate(0, 10);
+                // translate coordinate origin to the center of the picture
+                Contents.Translate(0, 10);
 
-            // adjust image size an preserve aspect ratio
-            PdfRectangle NewSize = Image1.ImageSizePosition(3, 1.1, ContentAlignment.MiddleCenter);
+                // adjust image size an preserve aspect ratio
+                PdfRectangle NewSize = Image1.ImageSizePosition(3, 1.1, ContentAlignment.MiddleCenter);
 
-            // clipping path
-            Contents.DrawOval(NewSize.Left, NewSize.Bottom, NewSize.Width, NewSize.Height, PaintOp.Fill);
+                // clipping path
+                Contents.DrawOval(NewSize.Left, NewSize.Bottom, NewSize.Width, NewSize.Height, PaintOp.Fill);
 
-            // draw image
-            Contents.DrawImage(Image1, NewSize.Left, NewSize.Bottom, NewSize.Width, NewSize.Height);
+                // draw image
+                Contents.DrawImage(Image1, NewSize.Left, NewSize.Bottom, NewSize.Width, NewSize.Height);
 
-            // restore graphics state
-            Contents.RestoreGraphicsState();
+                // restore graphics state
+                Contents.RestoreGraphicsState();
+            }
+
             return;
         }
         /*
@@ -298,24 +301,28 @@ namespace PassAPI
             }
             return;
         }
+
         private void DrawStrip()
         {
-            // define local image resources
-            // resolution 96 pixels per inch, image quality 50%
-            PdfImageControl ImageControl = new PdfImageControl();
-            ImageControl.Resolution = 96.0;
-            ImageControl.ImageQuality = 100;
-            //		ImageControl.SaveAs = SaveImageAs.GrayImage;
-            //		ImageControl.ReverseBW = true;
-            CreateStripFile();
-            PdfImage Image1 = new PdfImage(Document, "temps/strip.png", ImageControl);
+            if (pk.Strip != null)
+			{
+                // define local image resources
+                // resolution 96 pixels per inch, image quality 50%
+                PdfImageControl ImageControl = new PdfImageControl();
+                ImageControl.Resolution = 96.0;
+                ImageControl.ImageQuality = 100;
+                //		ImageControl.SaveAs = SaveImageAs.GrayImage;
+                //		ImageControl.ReverseBW = true;
+                CreateStripFile();
+                PdfImage Image1 = new PdfImage(Document, "temps/strip.png", ImageControl);
 
-            // save graphics state
-            Contents.SaveGraphicsState();
-            Contents.DrawImage(Image1, 0, 7.8, 8.5, 2.3);
+                // save graphics state
+                Contents.SaveGraphicsState();
+                Contents.DrawImage(Image1, 0, 7.8, 8.5, 2.3);
 
-            // restore graphics state
-            Contents.RestoreGraphicsState();
+                // restore graphics state
+                Contents.RestoreGraphicsState();
+            }
             return;
         }
         private PKPassField FindPKPassField(PKPassFieldSet source, string key)
