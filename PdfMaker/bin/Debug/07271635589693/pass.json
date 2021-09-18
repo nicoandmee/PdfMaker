@@ -1,0 +1,98 @@
+{
+    "formatVersion": 1,
+    "eventTicket": {
+        "headerFields": [{
+            "key": "eventDateTime",
+            "label": "Event Date",
+            "value": "9/25/21 TBA"
+        }],
+        "secondaryFields": [{
+            "key": "eventName",
+            "label": "Darrell K Royal Texas Memorial Stadium",
+            "value": "Texas Tech"
+        }],
+        "backFields": [{
+            "key": "facilityAddress",
+            "label": "Darrell K Royal Texas Memorial Stadium",
+            "value": "2139 San Jacinto Blvd\nAustin, TX  78712"
+        }, {
+            "key": "facilityPhone",
+            "label": "512-471-3333",
+            "value": ""
+        }, {
+            "key": "acctNum",
+            "label": "Account Number",
+            "value": "970491"
+        }, {
+            "key": "mobileTixBack",
+            "label": "IMPORTANT",
+            "value": "Texas Athletics has instituted reasonable practices in an attempt to ensure the health and safety of our fans. Please review the following link: https://tinyurl.com/yypjbp7o\r\n\r\nDo Not Print Out Your Ticket. Printed mobile tickets will not scan. Present your ticket on your phone at the facility entrance.\r\n\r\nStubb's Bar-B-Q has been smoking legendary Texas Bar-B-Q since 1968. Using only the finest cuts of meat, seasoned to perfection, and smoked over Post Oak wood, our Bar-B-Q is sure to please before or after the big game! Stop in tonight to our Red River location, just a short distance from the UT campus!.\r\n\r\n801 Red River St\r\nAustin, TX\r\nwww.stubbsaustin.com\r\n\r\n\r\n\r\nCampus Carry\r\n\r\nPursuant to Section 30.06, Penal Code (trespass by license holder with a concealed handgun), a person licensed under Subchapter H, Chapter 411, Government Code (handgun licensing law), may not enter this property with a concealed handgun.\r\n\r\nA clear bag policy is in effect to enhance existing security measures and expedite venue entry at Texas Athletics events on the Forty Acres. For more information, please go to www.texassports.com/clearbag.\r\n\r\nThis ticket is a revocable license and may not be used for advertising, promotion of other commercial or trade purposes, including, but not limited to, advertising, promotions, contests or sweepstakes, without prior written consent of The University of Texas Athletics Departments. The Holder agrees not to transmit, distribute, or sell (or aid in transmitting, distributing, or selling) any description, account, picture, video, audio, or other form of reproduction of the event or any surrounding activities (in whole or in part) for the event for which this ticket is issued. Breach of any terms of this license shall subject the Holder to all legal remedies available to The University of Texas.\r\n\r\n"
+        }],
+        "auxiliaryFields": [{
+            "key": "level",
+            "label": "LEVEL",
+            "value": "UDW",
+            "row": 0
+        }, {
+            "key": "section",
+            "label": "SECTION",
+            "value": "105",
+            "row": 0
+        }, {
+            "key": "row",
+            "label": "ROW",
+            "value": "37",
+            "row": 0
+        }, {
+            "key": "seat",
+            "label": "SEAT",
+            "value": "3",
+            "row": 0
+        }, {
+            "key": "auxiliary 0",
+            "label": "",
+            "value": "Enter at Gate 3. ",
+            "row": 1
+        }, {
+            "key": "auxiliary 1",
+            "label": "",
+            "value": "Do Not Print This Ticket",
+            "row": 1
+        }],
+        "userInfo": {
+            "dataAccountId": "869",
+            "seasonCode": "FB21",
+            "itemCode": "FB04",
+            "eventCode": "FB04",
+            "priceLevel": "3",
+            "priceType": "RE"
+        }
+    },
+    "passTypeIdentifier": "pass.com.paciolan.mobile.prod",
+    "serialNumber": "8690589438300035-970491-v2",
+    "teamIdentifier": "5844ZU9Q8E",
+    "authenticationToken": "c4ee239c17f8667621a475d41bfd76853a5667495bdcb5cb5c3534ace75b7392",
+    "organizationName": "UTA",
+    "description": "IMPORTANT INFO",
+    "foregroundColor": "rgb(255, 255, 255)",
+    "backgroundColor": "rgb(51, 63, 72)",
+    "labelColor": "rgb(191, 87, 0)",
+    "webServiceURL": "https://apigateway.evenue.net/applepass",
+    "groupingIdentifier": "869:FB21:FB04",
+    "sharingProhibited": true,
+    "barcode": {
+        "message": "07271635589693",
+        "format": "PKBarcodeFormatQR",
+        "messageEncoding": "iso-8859-1",
+        "altText": "07271635589693"
+    },
+    "barcodes": [{
+        "message": "07271635589693",
+        "format": "PKBarcodeFormatQR",
+        "messageEncoding": "iso-8859-1",
+        "altText": "07271635589693"
+    }],
+    "expirationDate": "2021-09-26T05:00:00Z",
+    "relevantDate": "2021-09-25T00:00:00-05:00",
+    "beacons": []
+}

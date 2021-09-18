@@ -30,9 +30,12 @@ C:\dev\ss\PdfMaker\PdfMaker\bin\Debug\PassKitSharp.pdb
 C:\dev\ss\PdfMaker\PdfMaker\bin\Debug\Newtonsoft.Json.xml
 C:\dev\ss\PdfMaker\PdfMaker\obj\Debug\PdfMaker.csproj.AssemblyReference.cache
 C:\dev\ss\PdfMaker\PdfMaker\obj\Debug\PdfMaker.csproj.CoreCompileInputs.cache
-C:\dev\ss\PdfMaker\PdfMaker\obj\Debug\PdfMaker.csproj.CopyComplete
 C:\dev\ss\PdfMaker\PdfMaker\obj\Debug\PdfMaker.exe
 C:\dev\ss\PdfMaker\PdfMaker\obj\Debug\PdfMaker.pdb
 C:\dev\ss\PdfMaker\PdfMaker\bin\Debug\PdfFileWriter.dll
 C:\dev\ss\PdfMaker\PdfMaker\bin\Debug\PdfFileWriter.pdb
 C:\dev\ss\PdfMaker\PdfMaker\bin\Debug\PdfFileWriter.xml
+C:\dev\ss\PdfMaker\PdfMaker\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\dev\ss\PdfMaker\PdfMaker\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\dev\ss\PdfMaker\PdfMaker\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\dev\ss\PdfMaker\PdfMaker\bin\Debug\System.Text.Encoding.CodePages.xml

@@ -7,12 +7,7 @@ namespace PdfMaker
     {
         static void Main(string[] args)
         {
-            if (args.Length == 0)
-            {
-                Console.WriteLine("Please pass filename as argument.");
-                return;
-            }
-            string filename = args[0];
+            string filename = "23820420453326.pkpass";
             Console.WriteLine($"Converting: {filename}");
             TicketPdfMaker t = new TicketPdfMaker(filename);
 
