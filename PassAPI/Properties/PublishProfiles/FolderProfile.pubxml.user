@@ -5,6 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\dev\ss\PdfMaker\PassAPI\bin\Release\net5.0\publish\</_PublishTargetUrl>
-    <History>True|2021-09-18T02:24:59.2006633Z;</History>
+    <History>True|2021-09-18T02:32:10.1873106Z;True|2021-09-17T20:24:59.2006633-06:00;</History>
   </PropertyGroup>
 </Project>

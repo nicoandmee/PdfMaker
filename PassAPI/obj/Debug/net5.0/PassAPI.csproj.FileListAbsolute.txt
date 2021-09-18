@@ -35,4 +35,4 @@ C:\dev\ss\PdfMaker\PassAPI\obj\Debug\net5.0\PassAPI.dll
 C:\dev\ss\PdfMaker\PassAPI\obj\Debug\net5.0\ref\PassAPI.dll
 C:\dev\ss\PdfMaker\PassAPI\obj\Debug\net5.0\PassAPI.pdb
 C:\dev\ss\PdfMaker\PassAPI\obj\Debug\net5.0\PassAPI.genruntimeconfig.cache
-C:\dev\ss\PdfMaker\PassAPI\bin\Debug\net5.0\ref\PassAPI.dll
+C:\dev\ss\PdfMaker\PassAPI\obj\Debug\net5.0\refint\PassAPI.dll
