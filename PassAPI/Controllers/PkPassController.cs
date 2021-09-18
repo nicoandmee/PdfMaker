@@ -48,11 +48,6 @@ namespace PassAPI.Controllers
 
                 // Send back
                 return new PhysicalFileResult(outputFilename, "application/pdf");
-                /*using (var sr = new StreamReader(outputFilename))
-                {
-                    var content = await sr.ReadToEndAsync();
-                    return Ok(content);
-                }*/
 
             }
             else
